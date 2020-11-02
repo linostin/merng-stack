@@ -4,15 +4,13 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const typeDefs = require("./graphql/typeDefs");
-const resolvers = require('./graphql/resolvers')
-
+const resolvers = require("./graphql/resolvers");
 
 // подключаем типы и ответы к apollo-server
 const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
-// ------------------------------------------
 
 const PORT = process.env.PORT || 5000;
 
